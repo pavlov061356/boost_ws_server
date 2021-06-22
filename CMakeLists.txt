@@ -3,11 +3,9 @@ project(WS_server LANGUAGES CXX)
 cmake_minimum_required(VERSION 3.19)
 
 set(CMAKE_CXX_STANDARD 20)
-set(BOOST_ROOT  "/home/alex/boost_1_76_0/boost")
+set(BOOST_ROOT  "/home/alex/boost_1_76_0")
 set (Boost_USE_STATIC_LIBS ON)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
-#set(BOOST_INCLUDEDIR "${BOOST_ROOT}/include")
-#set(BOOST_LIBRARYDIR "${BOOST_ROOT}/libs")
 
 find_package (Boost COMPONENTS system iostreams filesystem)
 include_directories (${Boost_INCLUDE_DIRS})
