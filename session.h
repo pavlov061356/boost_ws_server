@@ -4,18 +4,20 @@
 
 #include <boost/beast/core.hpp>
 #include <boost/beast/websocket.hpp>
-#include <boost/asio/dispatch.hpp>
+#include <boost/asio/connect.hpp>
+#include <boost/asio/buffer.hpp>
+#include <boost/asio/ip/tcp.hpp>
 #include <boost/asio/strand.hpp>
 #include "boost/filesystem.hpp"
-#include <algorithm>
 #include <cstdlib>
 #include <functional>
 #include <iostream>
 #include <memory>
 #include <string>
-#include <thread>
-#include <vector>
-//#include "fail.cpp"
+#include <boost/filesystem/operations.hpp>
+#include <string>
+#include <fstream>
+using namespace std;
 
 
 namespace beast = boost::beast;         // from <boost/beast.hpp>
