@@ -90,7 +90,7 @@ void
         //filesystem::path filename_ = "./get.txt";
         //std::string input;
         //input.assign(buffer_.data(), buffer_.size());
-        std::string s(buffer_cast<const char*>(buffer_.data()), buffer_.size());
+        std::string s(net::buffer_cast<const char*>(buffer_.data()), buffer_.size());
         filesystem::ofstream file_( filename_ , std::ios::out | std::ios::binary);
         file_ << s;
         file_.close();
